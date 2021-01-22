@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to Sweet Trip!</title>
+	<link rel="stylesheet" href="styles/main.css">
+	
+	<style>
+	
+	label{
+		color: navy;
+		float: left;
+		width: 10em;
+		font-weight:bold;
+		text-align:right;
+		 }
+	 input{
+		 width:15em;
+	 	 margin-left:1.2em;
+		 margin-bottom:.5em; 
+		 }
+	 input:focus{
+	 	border:2px solid navy;
+		 }
+	 
+	
+	</style>
+</head>
+
+<body>
+	<header>
+						<a href="index.html"><img src="images/sweet.gif" alt="Sweet"></a>
+			<h1><span class="shadow">Welcome to Sweet Trip!!</span></h1>
+			<h2>Schedule your trip today & get the best deal!! </h2>
+	</header>
+	
+	<nav>
+    	<ul>
+    		<li><a href="index.html">Home</a></li>
+    		<li><a href="about.html">About Us</a></li>
+    		<li><a href="packages.html">Travel Place</a></li>
+    		<li><a class="current" href="schedule.html">Tickets</a></li>
+    		<li><a href="contactus.html">Contact Us</a></li>
+			<li><a href="privacy.html">Policy</a></li>
+    	</ul>
+    </nav>
+	
+	
+	<section>
+		<h1>Schedule a Trip</h1>
+
+    	<form action="register_account.html" method="get"
+        	name="registration_form" id="registration_form">
+
+			<br>
+			<h2>Traveler's Information</h2>	
+    		<fieldset>     	
+				<label for="first_name">First Name:</label>
+				<input type="text" name="first_name" id="first_name" autofocus required><br>
+				
+				<label for="last_name">Last Name:</label>
+				<input type="text" name="last_name" id="last_name" required><br>
+					
+				<label for="email">E-Mail:</label>
+	        	<input type="email" name="email" id="email" placeholder="Must be a valid e-mail address" required><br>  
+				
+				<label for="email">Confirm E-Mail:</label>
+	        	<input type="confirm_email" name="confirm_email" id="confirm_email" placeholder="Re-confirm the e-mail address" required><br>    	
+				
+				<label for="address">Address 1:</label>
+				<input type="text" name="address1" id="address1"><br>
+				
+				<label for="address">Address 2:</label>
+				<input type="text" name="address2" id="address2"><br>
+				
+				<label for="city">City:</label>
+				<input type="text" name="city" id="city" required><br>
+				
+				<label for="state">State:</label>
+				<input type="text" name="state" id="state" required maxlength="2" placeholder="2-character code"><br>
+				
+				<label for="zip">ZIP Code:</label>
+				<input type="text" name="zip" id="zip" required placeholder="5 or 9 digits" 
+				       pattern="^\d{5}(-\d{4})?$" title="Either 5 or 9 digits"><br>
+				
+				<label for="phone">Phone Number:</label>
+				<input type="tel" name="phone" id="phone" placeholder="999-999-9999" 
+				       pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Must be 999-999-999 format"><br>
+			</fieldset>
+			
+			
+			<br><br>
+			<h2>Ordering Information</h2>
+			<fieldset>
+				
+				<label for="order_type">Travel Place: </label>
+				&nbsp;&nbsp;&nbsp;&nbsp;<select name="order_type" id="order_type">
+				    <option value="j">Japan</option>
+				    <option value="k">Korea</option>            
+				    <option value="s">Spain</option>
+					<option value="f">France</option>
+					<option value="e">England</option>
+					<option value="b">Brazil</option>
+					<option value="m">Mexico</option>
+				</select><br>
+				<label for="tickets_number">Number of Tickets:</label>
+				<input type="number" name="tickets_number" id="tickets_number"
+					   value="1" step="1" placeholder="Number of single tickets"><br>
+			</fieldset>
+			
+					
+			<br><br>
+			<h2>Credit Card Information</h2>
+			<fieldset>
+
+				<label for="card_type">Card Type:</label>
+					&nbsp;&nbsp;&nbsp;&nbsp;<select name="card_type" id="card_type">
+				    <option value="v">Visa</option>
+				    <option value="m">MasterCard</option>            
+				    <option value="d">Discovery</option>
+					 <option value="a">AMEX</option>
+				</select><br>
+				<label for="card_number">Card Number:</label>
+				<input type="text" name="card_number" id="card_number" required
+				       pattern="\d{16}" placeholder="16 digits" title="Must be 16 digits"><br>
+				
+				<label for="exp_month">Expiration Date:</label>
+			<!--	<input type="exp_month" name="exp_month" id="exp_month" placeholder="MM/YYYY" 
+				       pattern="[01]?\d\/d{4}" title="Must be MM/YYYY format"><br>  -->
+					   
+	
+					&nbsp;&nbsp;&nbsp;&nbsp;<select name="exp_month" id="exp_month">
+						<option value="1">January</option>
+						<option value="2">February</option>
+						<option value="3">March</option>
+						<option value="4">April</option>
+						<option value="5">May</option>
+						<option value="6">June</option>
+						<option value="7">July</option>
+						<option value="8">August</option>
+						<option value="9">September</option>
+						<option value="10">October</option>
+						<option value="11">November</option>
+						<option value="12">December</option>
+					</select>
+					<select name="exp_year" id="exp_year">
+						<option value="2012">2012</option>
+						<option value="2013">2013</option>
+						<option value="2014">2014</option>
+						<option value="2015">2015</option>
+						<option value="2016">2016</option>
+						<option value="2017">2017</option>
+						<option value="2018">2018</option>
+						<option value="2019">2019</option>
+						<option value="2020">2020</option>
+					</select><br>		
+			</fieldset>
+			<br><br>
+			<h2>Comments for Us</h2>
+			<fieldset>
+
+			<TEXTAREA Name="comment" ROWS=4 COLS=62></TEXTAREA>
+			</fieldset>
+			<br><br>
+			
+			<h2>Newsletter</h2>
+			<fieldset>
+			<p>Would you like to subscribe our e-newsletter?</p>
+			<input type="checkbox" name="yes_news" id="yes" value="yes" checked>
+			<label for="yes">Yes</label><br>
+			<input type="checkbox" name="no_news" id="no" value="no">
+			<label for="no">No</label>
+
+			</fieldset><br><br>
+			
+			
+			<h2>Order Your Trip</h2>
+			<fieldset id="buttons">
+
+				<br>
+				<input type="submit" id="submit" value="Submit">
+				<input type="reset" id="reset" value="Reset Fields"><br>
+			</fieldset>
+			
+		</form>
+		<br><br>
+	</section>
+	
+	
+	
+	
+	<aside>
+		<h1>Where do you want to go?</h1>
+		<img src="images/japan.gif" alt="Asia"><h2><a href="packages.html">Asia</a></h2><br>
+		<img src="images/france.gif" alt="Europe"><h2><a href="packages.html">Europe</a></h2><br>
+		<img src="images/brazil.gif" alt="South America"><h2><a href="packages.html">South America</a></h2>
+	</aside>
+	
+	<footer>
+		<p>&copy; 2013, Sweet Trip, Glendale, CA 91208</p>
+	</footer>
+</body>
+</html>
